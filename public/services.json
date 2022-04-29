@@ -1,0 +1,74 @@
+[
+  {
+    "id":1,
+    "name":"OFFICE FURNITURE",
+    "price":"200",
+    "descreption":"Furniture is a key element within any office, not only providing comfort for employees, but also aiding professionalism. The importance of office furniture should never be underestimated, as it can make or break your workplace efficiency.. File storage units are also available in different sizes and styles. For example, single door file storage units, double door file storage units, file storage units with multiple drawers, etc",
+    "img":"https://i.ibb.co/bsg0YBx/office1.jpg"  
+  },
+  {
+    "id":2,
+    "name":"LIVING ROOM FURNITURE",
+    "price":"100",
+    "descreption":"A living room is a room in a home that's used for entertaining friends, talking, reading, or watching television. If you're a couch potato, you most likely spend lots of time in your living room. You can also call a living room a lounge, a sitting room, a front room, or a parlor.",
+    "img":"https://i.ibb.co/C6nhwqh/livingroom1.jpg"  
+  },
+  {
+    "id":3,
+    "name":"DINING ROOM FURNITURE",
+    "price":"300",
+    "descreption":"Formal dining rooms tend to be a completely separate room, often with pocket doors, French doors or ornate double doors, to further sequester them from the rest of the house. Casual dining rooms often share space with the kitchen or living room and are wide open",
+    "img":"https://i.ibb.co/ZW6QmLL/dining1.jpg"  
+  },
+  {
+    "id":4,
+    "name":"MATTRESS SLEEP",
+    "price":"100",
+    "descreption":"In general, medium-firm mattresses (which are often between 5 and 7 on the scale) provide a good blend of support and comfort for most sleepers. A small 2010 study suggests sleeping on a medium-firm mattress may help relieve pain and improve sleep qualit",
+    "img":"https://i.ibb.co/ZMFBSH1/mattresses1.jpg"  
+  },
+  {
+    "id":5,
+    "name":"ENTERTAINMENT CENTER",
+    "price":"100",
+    "descreption":"A TV cabinet it a style of TV stand with doors that open. The doors might be solid wood or they might have glass partitions. Some TV cabinets also feature some open shelving in addition to the cabinets. Most TV cabinets have been designed to have the television sit on the top shelf.",
+    "img":"https://i.ibb.co/f9fvbmz/tvelectronic1.jpg"  
+  },
+  {
+    "id":6,
+    "name":"BED ROOM FURNITURE",
+    "price":"100",
+    "descreption":"Bedroom furniture. Bedroom furniture, sometimes called a bedroom set or bedroom suite consists of a group of furniture in a bedroom or sleeping quarters. Pieces of furniture referred to as bedroom furniture usually include: beds, wardrobes, dressers, chests, nightstands, armoires, vanities, trunks, and mirrors.",
+    "img":"https://i.ibb.co/jL8m38p/bedroom1.jpg"  
+  },
+  {
+    "id":7,
+    "name":"OFFICE FURNITURE",
+    "price":"100",
+    "descreption":"A TV cabinet it a style of TV stand with doors that open. The doors might be solid wood or they might have glass partitions. Some TV cabinets also feature some open shelving in addition to the cabinets. Most TV cabinets have been designed to have the television sit on the top shelf.",
+    "img":"https://i.ibb.co/y5JMZ6C/office2-chair.jpg"  
+  },
+  {
+    "id":8,
+    "name":"ENTERTAINMENT CENTER",
+    "price":"100",
+    "descreption":"A TV cabinet it a style of TV stand with doors that open. The doors might be solid wood or they might have glass partitions. Some TV cabinets also feature some open shelving in addition to the cabinets. Most TV cabinets have been designed to have the television sit on the top shelf.",
+    "img":"https://i.ibb.co/VqqMtPX/tvelectronic2.jpg"  
+  },
+  {
+    "id":9,
+    "name":"BED ROOM FURNITURE",
+    "price":"100",
+    "descreption":"A TV cabinet it a style of TV stand with doors that open. The doors might be solid wood or they might have glass partitions. Some TV cabinets also feature some open shelving in addition to the cabinets. Most TV cabinets have been designed to have the television sit on the top shelf.",
+    "img":"https://i.ibb.co/WcJGDTt/bedroom2.jpg"  
+  }
+]
+
+
+
+
+
+
+
+
+
