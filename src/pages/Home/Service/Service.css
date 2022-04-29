@@ -1,0 +1,7 @@
+.service{
+    width: auto;
+    overflow: hidden;
+}
+.service img{
+    width: 100%;
+}
