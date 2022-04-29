@@ -6,19 +6,20 @@ const Navber = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+  <Navbar.Brand href="#home">Furniture Store</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
       <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link href="#pricing">Blog</Nav.Link>
+      <Nav.Link href="#pricing">Service</Nav.Link>
       
     </Nav>
     <Nav>
-      <Nav.Link href="#deets">More deets</Nav.Link>
-      <Nav.Link eventKey={2} href="#memes">
-        Dank memes
-      </Nav.Link>
+      <Nav.Link href="#deets">Manage Items</Nav.Link>
+      <Nav.Link href="#deets">Add Item</Nav.Link>
+      <Nav.Link href="#deets">My Items</Nav.Link>
+      <Nav.Link eventKey={2} href="#memes">Log In</Nav.Link>
     </Nav>
   </Navbar.Collapse>
   </Container>
