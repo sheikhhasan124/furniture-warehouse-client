@@ -1,0 +1,18 @@
+.social{
+   margin: 10px 0; 
+}
+.social button{
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+    color: white;
+    background-color: gray;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.icon{
+    font-size: 30px;
+    margin-right: 5px;
+}

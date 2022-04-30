@@ -1,18 +1,41 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useRef } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../../_firebase_init';
+import SocialAuth from '../socialAuth/SocialAuth';
 import './Login.css'
 
 const Login = () => {
+    const emailRef = useRef('')
+    const passwordRef = useRef('')
+    const location = useLocation()
+    const navigate = useNavigate()
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
+      const handleFormSubmit = event=>{
+          event.preventDefault()
+          const email = emailRef.current.value;
+          const pass = passwordRef.current.value;
+          signInWithEmailAndPassword(email, pass)
+        }
+        let from = location.state?.from?.pathname || "/";
+      if(user){
+        navigate(from, { replace: true });
+      }
     return (
         <div className='login-container'>
            <div>
            <h3 className='text-center'>Log In</h3>
-            <form>
+            <form onSubmit={handleFormSubmit}>
              <div className="input-group">
-             <input type="email" name="email" id="" placeholder='email'/>
+             <input ref={emailRef} type="email" name="email" id="" placeholder='email'/>
              </div>
              <div className="input-group">
-             <input type="text" name="password" id="" placeholder='password'/>
+             <input ref={passwordRef} type="text" name="password" id="" placeholder='password'/>
              </div>
              <input className='w-50 mx-auto d-block' type="submit" value="Login" />
             </form>
@@ -23,6 +46,7 @@ const Login = () => {
                 <div>or</div>
                 <div className="hr"></div>
             </div>
+           <SocialAuth/>
            </div>
         </div>
     );

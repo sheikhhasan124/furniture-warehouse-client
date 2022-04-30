@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../_firebase_init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import SocialAuth from '../socialAuth/SocialAuth';
 
 const Registration = () => {
     const [
@@ -47,6 +48,7 @@ const Registration = () => {
                 <div>or</div>
                 <div className="hr"></div>
             </div>
+        <SocialAuth></SocialAuth>
            </div>
         </div>
         </div>
