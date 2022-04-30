@@ -1,3 +1,9 @@
+.services-container button{
+    padding: 10px 50px;
+    margin: 10 auto;
+    display: block;
+    
+}
 .services{
     display: grid;
     grid-template-columns: repeat(3, 1fr);

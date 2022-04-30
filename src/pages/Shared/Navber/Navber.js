@@ -24,9 +24,13 @@ const Navber = () => {
       
     </Nav>
     <Nav>
-      <Nav.Link href="#deets">Manage Items</Nav.Link>
-      <Nav.Link href="#deets">Add Item</Nav.Link>
-      <Nav.Link href="#deets">My Items</Nav.Link>
+      {user &&
+            <>
+              <Nav.Link as={Link} to="/manageStock">Manage Items</Nav.Link>
+              <Nav.Link as={Link} to="/addItem">Add Item</Nav.Link>
+              <Nav.Link as={Link} to="/myItem">My Items</Nav.Link>
+            </>
+       }
       {
         user?
         <Nav.Link eventKey={2} onClick={handleSignOut} >Sign out</Nav.Link>
