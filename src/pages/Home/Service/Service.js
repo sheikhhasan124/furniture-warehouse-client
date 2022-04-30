@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({service}) => {
-    console.log(service)
-    const {name,price,img,descreption,quantity,suplier}=service;
+    // console.log(service)
+    const {_id,name,price,img,descreption,quantity,suplier}=service;
     return (
         <div className='service'>
             <img src={img} alt="" />
@@ -14,6 +15,7 @@ const Service = ({service}) => {
             <p>
                 <samll>{descreption}</samll>
             </p>
+            <Link to={`/product/${_id}`}><button>Stock Update</button></Link>
         </div>
     );
 };
