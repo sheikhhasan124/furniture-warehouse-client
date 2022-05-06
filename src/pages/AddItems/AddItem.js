@@ -12,7 +12,7 @@ const AddItem = () => {
         const img = event.target.img.value;
         const data = {name,price,quantity,descreption,suplier,img}
           
-        const url = `https://serene-meadow-46375.herokuapp.com/product`
+        const url = `http://localhost:5000/product`
         fetch(url,{
             method:'POST',
             headers:{

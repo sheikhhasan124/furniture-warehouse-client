@@ -23,11 +23,16 @@
   grid-template-columns: repeat(4,1fr);
   grid-gap: 20px;
 }
+
 .programm-item{
   background-color: #ffff;
   opacity: 0.8;
   padding: 30px 15px;
   text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+.programm-item:hover{
+  transform: scale(1.1);
 }
 .programm-item h5{
   text-transform: uppercase;

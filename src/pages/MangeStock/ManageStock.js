@@ -8,7 +8,7 @@ const ManageStock = () => {
     const deleteItem=(id)=>{
         const proceed = window.confirm('are u sure to delete')
         if(proceed){
-            const url = `https://serene-meadow-46375.herokuapp.com/product/${id}`
+            const url = `http://localhost:5000//product/${id}`
             fetch(url,{
                 method:'DELETE',
             })

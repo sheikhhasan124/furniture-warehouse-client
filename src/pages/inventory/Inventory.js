@@ -5,7 +5,7 @@ const Inventory = () => {
     const {id}= useParams()
     const [product, setProduct]=useState({})
     useEffect(()=>{
-        fetch(`https://serene-meadow-46375.herokuapp.com/product/${id}`)
+        fetch(`http://localhost:5000//product/${id}`)
         .then(res=>res.json())
         .then(data=>setProduct(data))
     })

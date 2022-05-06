@@ -1,9 +1,10 @@
 import React from 'react';
+import './Gallary.css'
 
-const Gallery = () => {
+const Gallery = ({image}) => {
     return (
-        <div>
-            <h2>Gallery</h2>
+        <div className='gallary'>
+            <img src={image.img} alt="" />
         </div>
     );
 };
