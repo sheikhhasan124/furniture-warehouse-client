@@ -9,6 +9,14 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
+.service-head-part1{
+    font-size: 30px;
+    font-weight: bold;
+}
+.service-head-part2{
+    font-size: 30px;
+    color: gray;
+}
 @media screen and (max-width:900px) {
     .services{
         grid-template-columns: repeat(2, 1fr);

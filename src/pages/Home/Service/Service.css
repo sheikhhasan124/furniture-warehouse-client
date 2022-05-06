@@ -1,7 +1,49 @@
 .service{
     width: auto;
     overflow: hidden;
+    height: 650px;
+    /* padding: 10px; */
+    border: 1px solid gray;
+    position: relative;
 }
 .service img{
     width: 100%;
+}
+.service p{
+    margin: 0;
+    padding: 0 5px;
+}
+.service .name{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.price,.suplier{
+    color: rgb(63, 41, 37);
+    font-size: 20px ;
+}
+.service .desc{
+    color: gray;
+    font-size: 15px;
+}
+.item-flex{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.quantity{
+    font-size: 17px;
+     color: tomato;
+    padding-left:50px ;
+}
+.service button{
+    border: none;
+    text-align: center;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: rgb(59, 32, 27);
+    text-transform: uppercase;
+    font-size: 20px;
 }

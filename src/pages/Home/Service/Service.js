@@ -9,13 +9,15 @@ const Service = ({service}) => {
         <div className='service'>
             <img src={img} alt="" />
             <p className="name">{name}</p>
-            <p className="price">{price}</p>
-            <p className="quantity">{quantity}</p>
-            <p className="suplier">{suplier}</p>
-            <p>
+            <div className="item-flex">
+            <p className="price">Price: ${price}</p>
+            <p className="quantity">In-stock:{quantity}</p>
+            </div>
+            <p className="suplier">Suplier: {suplier}</p>
+            <p className='desc mt-4'>
                 <samll>{descreption}</samll>
             </p>
-            <Link to={`/product/${_id}`}><button>Stock Update</button></Link>
+            <Link to={`/product/${_id}`}><button className='mx-auto'>Stock Update</button></Link>
         </div>
     );
 };

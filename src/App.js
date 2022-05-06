@@ -5,6 +5,7 @@ import AddItem from './pages/AddItems/AddItem';
 import Login from './pages/Auth/Login/Login';
 import Registration from './pages/Auth/Registration/Registration';
 import RequireAuth from './pages/Auth/requireAuth/RequireAuth';
+import Blog from './pages/Blog/Blog';
 import Home from './pages/Home/Home/Home';
 import Inventory from './pages/inventory/Inventory';
 import ManageStock from './pages/MangeStock/ManageStock';
@@ -23,6 +24,7 @@ function App() {
          <Route path='/login' element={<Login></Login>}></Route>
          <Route path='/addItem' element={<AddItem></AddItem>}></Route>
          <Route path='/myItem' element={<MyItems></MyItems>}></Route>
+         <Route path='/blog' element={<Blog></Blog>}></Route>
          <Route path='/register' element={<Registration></Registration>}></Route>
          <Route path='/manageStock' element={<ManageStock></ManageStock>}></Route>
          <Route path="/product/:id" element={<RequireAuth>

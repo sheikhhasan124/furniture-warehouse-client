@@ -19,7 +19,7 @@ const Navber = () => {
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
       <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Blog</Nav.Link>
+      <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
       <Nav.Link href="#pricing">Service</Nav.Link>
       
     </Nav>
