@@ -14,6 +14,25 @@ const Inventory = () => {
         .then(data=>setProduct(data))
     },[product])
     // console.log(product)
+   const handleDelever=()=>{
+       const quantity = product.quantity - 1;
+       const data = {quantity}
+       const url = `http://localhost:5000/product/${id}`
+       fetch(url,{
+           method:'PUT',
+           headers:{
+             'Content-Type':'application/json'
+           },
+           body:JSON.stringify(data)
+       })
+       .then(res=>res.json())
+       .then(data=>{
+         //   console.log(data)
+           alert('user deliver make succeessfully')
+        //    event.target.reset();
+       })
+   }
+
    const handleFormQuantity=(event)=>{
        event.preventDefault()
       const quantity = event.target.quantity.value;
@@ -28,7 +47,7 @@ const Inventory = () => {
       })
       .then(res=>res.json())
       .then(data=>{
-          console.log(data)
+        //   console.log(data)
           alert('user update make succeessfully')
           event.target.reset();
       })
@@ -49,7 +68,7 @@ const Inventory = () => {
         <p className='desc mt-4'>
             <samll>{descreption}</samll>
         </p>
-        <button>DELEVER</button>
+        <button onClick={handleDelever}>DELEVER</button>
         <div className="add-quantity">
             <form onSubmit={handleFormQuantity}>
                 <input type="text" name='quantity' placeholder='add item quantity' />
