@@ -12,7 +12,10 @@ const Services = () => {
             <div className="services">
             {services.slice(0,6).map(service=><Service key={service._id} service={service}></Service>)}
             </div>
-            <button><Link to="/manageStock">Manage Stock</Link></button>
+            <div className="button-group">
+            <button><Link to="/manageStock">MANAGE STOCK</Link></button>
+            <button><Link to="/addItem">ADD NEW ITEM</Link></button>
+            </div>
         </div>
     );
 };
