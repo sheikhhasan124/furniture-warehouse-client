@@ -6,7 +6,7 @@ const AddItem = () => {
         event.preventDefault()
         const name = event.target.name.value;
         const price = event.target.price.value;
-        const quantity = event.target.quantity.value;
+       const quantity = event.target.quantity.value;
         const descreption = event.target.descreption.value;
         const suplier = event.target.suplier.value;
         const img = event.target.img.value;
@@ -34,7 +34,7 @@ const AddItem = () => {
            <form onSubmit={handleForm}>
                <input type="text" name='name' placeholder='name'/>
                <input type="text" name="price" placeholder='price' id="" />
-               <input type="text" name="quantity" id="" placeholder='quantity'/>
+               <input type="text" name="quantity" id="" placeholder='quantity' />
                <input type="text" name="descreption" id="" placeholder='decs' />
                <input type="text" name="suplier" id="" placeholder='suplier'/>
                <input type="text" name="img" id="" placeholder='img' />
