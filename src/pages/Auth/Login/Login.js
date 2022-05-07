@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import useToken from '../../../Hook/UseToken';
 import auth from '../../../_firebase_init';
 import SocialAuth from '../socialAuth/SocialAuth';
@@ -17,6 +18,7 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+      const [sendPasswordResetEmail, sending, error1] = useSendPasswordResetEmail(auth);
       const [token]=useToken(user)
       const handleFormSubmit = event=>{
           event.preventDefault()
@@ -31,6 +33,15 @@ const Login = () => {
       let errorElement;
     if(error){
       errorElement = <p className="text-danger">Error:{error?.message}</p>
+    }
+    const resetPassword =async()=>{
+      const email = emailRef.current.value;
+      if(email){
+        await sendPasswordResetEmail(email)
+        toast('sent email')
+      }else{
+        toast('please enter email adderess')
+      }
     }
     return (
         <div className='login-container'>
@@ -47,7 +58,7 @@ const Login = () => {
             </form>
             <p>{errorElement}</p>
             <p>Haven't you register? <span><Link className='text-danger text-decoration-none' to="/register">Plese register</Link></span></p>
-            <p>Forget Password? <span className='text-danger'>Reset Password</span></p>
+            <p>Forget Password? <span onClick={resetPassword} className='text-danger'>Reset Password</span></p>
             <div className='hr-div'>
                 <div className="hr"></div>
                 <div>or</div>
@@ -55,6 +66,7 @@ const Login = () => {
             </div>
            <SocialAuth/>
            </div>
+           <ToastContainer/>
         </div>
     );
 };

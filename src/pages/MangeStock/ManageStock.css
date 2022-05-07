@@ -1,12 +1,33 @@
+.manage-section{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .manage-product {
+    width: 500px;
     display: flex;
     align-items: center;
-    margin: 0 10px;
+    justify-content:space-between;
+    margin: 5px 10px;
+    border: 1px solid rgb(189, 92, 92);
+    padding: 0 10px;
     /* justify-content: center; */
 }
+.manage-product button{
+    border: none;
+    background-color: rgb(255, 107, 81);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+}
 .manage-product img{
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     margin: 10px;
+    
 }

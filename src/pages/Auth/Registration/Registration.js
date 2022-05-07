@@ -11,17 +11,17 @@ const Registration = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
       const [token]=useToken(user)
       const navigate = useNavigate()
 
-      const handleFormSubmit = event =>{
+      const handleFormSubmit = async(event) =>{
           event.preventDefault()
           const name = event.target.name.value;
           const email = event.target.email.value;
           const pass = event.target.password.value;
 
-          createUserWithEmailAndPassword(email, pass)
+         await createUserWithEmailAndPassword(email, pass)
       }
       if(token){
         navigate('/')

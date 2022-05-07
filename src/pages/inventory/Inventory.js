@@ -77,6 +77,7 @@ const Inventory = () => {
                 <input type="submit" value="SUBMIT" />
             </form>
         </div>
+        <button><Link to="/manageStock">MANAGE STOCK</Link></button>
        </div>
     );
 };

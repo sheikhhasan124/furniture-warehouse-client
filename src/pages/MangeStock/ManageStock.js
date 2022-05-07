@@ -21,10 +21,11 @@ const ManageStock = () => {
     }
     
     return (
-        <div>
-            <h2>manage stock{services.length}</h2>
+        <div className='manage-section'>
+            <p className='text-center mt-4'><span className='service-head-part1'>MANAGE</span> <span className='service-head-part2'>STOCK</span>{services.length}</p>
+            
             {services.map(service=><div className='manage-product'>
-                 <h3>{service.name}</h3><span><img src={service.img} alt="" /></span>
+                 <span><img src={service.img} alt="" /></span><span><h5>{service.name}</h5></span>
                  <button onClick={()=>deleteItem(service._id)}>delete</button>
             </div>)}
         </div>

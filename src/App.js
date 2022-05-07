@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import 'react-toastify/dist/ReactToastify.css';
 import AddItem from './pages/AddItems/AddItem';
 import Login from './pages/Auth/Login/Login';
 import Registration from './pages/Auth/Registration/Registration';
