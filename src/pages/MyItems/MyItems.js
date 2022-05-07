@@ -1,17 +1,33 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
+import axiosPrivate from '../../Api/AxiosPrivate';
 import auth from '../../_firebase_init';
 import './MyItems.css'
 
 const MyItems = () => {
     const [user]=useAuthState(auth)
     const [items,setItem]=useState([])
+    const navigate = useNavigate()
     console.log(items)
      useEffect(()=>{
-           const email = user?.email;
-           fetch(`http://localhost:5000/myProduct?email=${email}`)
-           .then(res=>res.json())
-           .then(data=>setItem(data))
+         const getOrder = async()=>{
+             const email = user?.email;
+              const url = `http://localhost:5000/myProduct?email=${email}`
+              try {
+                  const {data} = await axiosPrivate.get(url)
+                  setItem(data)
+              } catch (error) {
+                  console.log(error.message)
+                  if(error.response.status===401 ||error.response.status===403){
+                      signOut(auth)
+                      navigate('/login')
+                  }
+              }
+         }
+         getOrder()  
+           
      },[user])
      const deleteItem=(id)=>{
         const proceed = window.confirm('are u sure to delete')
