@@ -11,7 +11,7 @@ const Inventory = () => {
     useEffect(()=>{
         fetch(`http://localhost:5000/product/${id}`)
         .then(res=>res.json())
-        .then(data=>setProduct(data))
+        .then(data=> parseInt(setProduct(data)) )
     },[product])
     // console.log(product)
    const handleDelever=()=>{
@@ -32,10 +32,12 @@ const Inventory = () => {
         //    event.target.reset();
        })
    }
-
+     // update quantity
    const handleFormQuantity=(event)=>{
        event.preventDefault()
-      const quantity = event.target.quantity.value;
+       const currentQuantity = product.quantity;
+       console.log(currentQuantity)
+      const quantity = parseInt(currentQuantity + event.target.quantity.value)
       const data = {quantity}
       const url = `http://localhost:5000/product/${id}`
       fetch(url,{
@@ -62,7 +64,7 @@ const Inventory = () => {
         <p>{product._id}</p>
         <div className="item-flex">
         <p className="price">Price: ${price}</p>
-        <p className="quantity">In-stock:{quantity}</p>
+        <p className="quantity">In-stock:{parseInt(quantity)}</p>
         </div>
         <p className="suplier">Suplier: {suplier}</p>
         <p className='desc mt-4'>
@@ -71,7 +73,7 @@ const Inventory = () => {
         <button onClick={handleDelever}>DELEVER</button>
         <div className="add-quantity">
             <form onSubmit={handleFormQuantity}>
-                <input type="text" name='quantity' placeholder='add item quantity' />
+                <input type="number" name='quantity' placeholder='add item quantity' />
                 <input type="submit" value="SUBMIT" />
             </form>
         </div>

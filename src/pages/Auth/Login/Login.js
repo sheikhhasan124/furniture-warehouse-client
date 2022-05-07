@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useToken from '../../../Hook/UseToken';
 import auth from '../../../_firebase_init';
 import SocialAuth from '../socialAuth/SocialAuth';
 import './Login.css'
@@ -16,6 +17,7 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+      const [token]=useToken(user)
       const handleFormSubmit = event=>{
           event.preventDefault()
           const email = emailRef.current.value;
@@ -23,9 +25,13 @@ const Login = () => {
           signInWithEmailAndPassword(email, pass)
         }
         let from = location.state?.from?.pathname || "/";
-      if(user){
+      if(token){
         navigate(from, { replace: true });
       }
+      let errorElement;
+    if(error){
+      errorElement = <p className="text-danger">Error:{error?.message}</p>
+    }
     return (
         <div className='login-container'>
            <div>
@@ -39,6 +45,7 @@ const Login = () => {
              </div>
              <input className='w-50 mx-auto d-block' type="submit" value="Login" />
             </form>
+            <p>{errorElement}</p>
             <p>Haven't you register? <span><Link className='text-danger text-decoration-none' to="/register">Plese register</Link></span></p>
             <p>Forget Password? <span className='text-danger'>Reset Password</span></p>
             <div className='hr-div'>

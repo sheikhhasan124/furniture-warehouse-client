@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../_firebase_init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import SocialAuth from '../socialAuth/SocialAuth';
+import useToken from '../../../Hook/UseToken';
 
 const Registration = () => {
     const [
@@ -11,6 +12,7 @@ const Registration = () => {
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
+      const [token]=useToken(user)
       const navigate = useNavigate()
 
       const handleFormSubmit = event =>{
@@ -21,9 +23,13 @@ const Registration = () => {
 
           createUserWithEmailAndPassword(email, pass)
       }
-      if(user){
+      if(token){
         navigate('/')
       }
+      let errorElement;
+    if(error){
+      errorElement = <p className="text-danger">Error:{error?.message}</p>
+    }
     return (
         <div>
              <div className='login-container'>
@@ -41,6 +47,7 @@ const Registration = () => {
              </div>
              <input className='w-50 mx-auto d-block' type="submit" value="Registration" />
             </form>
+            <p>{errorElement}</p>
             <p>Already have an account? <span><Link className='text-danger text-decoration-none' to="/login">Plese Login</Link></span></p>
             
             <div className='hr-div'>

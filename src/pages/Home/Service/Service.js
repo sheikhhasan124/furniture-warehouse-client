@@ -11,7 +11,7 @@ const Service = ({service}) => {
             <p className="name">{name}</p>
             <div className="item-flex">
             <p className="price">Price: ${price}</p>
-            <p className="quantity">In-stock:{quantity}</p>
+            <p className="quantity">In-stock:{parseInt(quantity)}</p>
             </div>
             <p className="suplier">Suplier: {suplier}</p>
             <p className='desc mt-4'>
