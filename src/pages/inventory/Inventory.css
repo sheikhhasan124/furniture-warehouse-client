@@ -1,3 +1,50 @@
 .inventory{
-    
+   padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.inventory-data img{
+    width: 400px;
+}
+.inventory-data{
+    width: 700px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+.img-serction button{
+    margin: 10px auto;
+    display: block;
+    padding: 5px 50px;
+    border: none;
+    background-color: rgb(247, 113, 113);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+.manage-btn{
+    margin: 50px auto;
+    display: block;
+    padding: 10px 70px;
+    border: none;
+    background-color: rgb(247, 113, 113);
+    border-radius: 10px;
+    color: white;
+    font-size: 20px; 
+}
+.manage-btn a {
+    text-decoration: none;
+    color: white;
+}
+.add-quantity input[type=number]{
+    border: 1px solid gray;
+    background-color: rgb(243, 238, 237);
+    padding: 10px 40px;
+}
+.add-quantity input[type=submit]{
+    border: 1px solid gray;
+    background-color:rgb(245, 124, 103);
+    padding: 10px 20px;
+    color: white;
 }

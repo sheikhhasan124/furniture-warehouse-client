@@ -1,3 +1,24 @@
+## FURNITURE WAREHOUSE  
+### What feature has there
+- featuer, programm, store gallary in home page  
+- manage item  
+- add item  
+- my item  
+- authentication by email and password  
+- authentication by google  
+- MERN crud api  
+
+### Which technoly has used  
+- react-boostrap  
+- react-router-dom  
+- firebase  
+- react-firebase-hook  
+- react-icon  
+- react-toastyfi  
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

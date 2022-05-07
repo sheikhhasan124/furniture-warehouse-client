@@ -12,7 +12,7 @@ const Footer = () => {
         <div className='footer-container'>
             <div className="footer-info">
              <div>
-                <h3 className='title colore-white'>BIEN HEALTH</h3>
+                <h3 className='title colore-white'>FURNITURE WAREHOUSE</h3>
                 <p>Consulting WP - Before we talk destination, we shine a spotlight across your organization to fully understand its people, processes, and technology.</p>
             </div>
             <div className="pages">
@@ -27,7 +27,7 @@ const Footer = () => {
                 <div>
                     <h3 className='title  colore-white'>RECENT NEWS</h3>
                     <p>VIEW ALL</p>
-                    <h6 className='colore-white'>Ultrasmall nanoparticles kill cancer cells in unusual way</h6>
+                    <h6 className='colore-white'>Evaluating the furniture industry's gender balance. The UK furniture industry</h6>
                     <div className="date">
                          <span className='me-2'><FaClock></FaClock></span>
                         <span>{today}</span>
@@ -36,7 +36,7 @@ const Footer = () => {
                 <div className="hr"></div>
                 <div>
                     
-                    <h6 className='colore-white'>Sense of smell may predict Alzheimers risk</h6>
+                    <h6 className='colore-white'>Discover contemporary furniture & interiors with design ideas, product features & latest trade information brought to you by Furniture News Magazine</h6>
                     <div className="date">
                          <span className='me-2'><FaClock></FaClock></span>
                         <span>{today}</span>
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
             <div className="hr"></div>
             <div className='footer-social'>
-                <p><small>All right reserved by {year} Bien Health.</small></p>
+                <p><small>All right reserved by {year} Warehouse.</small></p>
                 <div className="social-icon">
                     <button><FaFacebookSquare></FaFacebookSquare></button>
                     <button><FaTwitterSquare/></button>
