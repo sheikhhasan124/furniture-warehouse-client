@@ -5,7 +5,7 @@ import './Gallary.css'
 const Gallarys = () => {
     const [img, setImg]=useState([])
     useEffect(()=>{
-     fetch('http://localhost:5000/gallary')
+     fetch('https://serene-meadow-46375.herokuapp.com/gallary')
      .then(res=>res.json())
      .then(data=>setImg(data))
     },[])

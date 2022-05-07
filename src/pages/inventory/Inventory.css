@@ -4,8 +4,8 @@
     justify-content: space-around;
     align-items: center;
 }
-.inventory-data img{
-    width: 400px;
+.dec-section{
+    margin: 10px;
 }
 .inventory-data{
     width: 700px;
@@ -13,15 +13,30 @@
     grid-template-columns: auto auto;
     grid-gap: 10px;
 }
-.img-serction button{
-    margin: 10px auto;
-    display: block;
+.dec-section button{
+    margin: 10px 0;
+    display: inline-block;
     padding: 5px 50px;
-    border: none;
-    background-color: rgb(247, 113, 113);
+    border: 2px solid tomato;
+   
     border-radius: 10px;
-    color: white;
+    color: tomato;
     font-size: 20px;
+}
+.dec-section .name{
+    font-size: 30px;
+    font-weight: bold;
+}
+.dec-section p{
+    margin: 0;
+}
+.gold{
+    color: rgb(122, 108, 25);
+    font-size: 20px;
+    font-weight: bold;
+}
+.tomato{
+    color: tomato;
 }
 .manage-btn{
     margin: 50px auto;
@@ -40,11 +55,16 @@
 .add-quantity input[type=number]{
     border: 1px solid gray;
     background-color: rgb(243, 238, 237);
-    padding: 10px 40px;
+    padding: 10px 20px;
 }
 .add-quantity input[type=submit]{
     border: 1px solid gray;
     background-color:rgb(245, 124, 103);
     padding: 10px 20px;
     color: white;
+}
+@media screen and (max-width:700px) {
+    .inventory{
+        flex-direction: column;
+    }
 }

@@ -14,7 +14,7 @@ const MyItems = () => {
      useEffect(()=>{
          const getOrder = async()=>{
              const email = user?.email;
-              const url = `http://localhost:5000/myProduct?email=${email}`
+              const url = `https://serene-meadow-46375.herokuapp.com/myProduct?email=${email}`
               try {
                   const {data} = await axiosPrivate.get(url)
                   setItem(data)
@@ -32,7 +32,7 @@ const MyItems = () => {
      const deleteItem=(id)=>{
         const proceed = window.confirm('are u sure to delete')
         if(proceed){
-            const url = `http://localhost:5000/product/${id}`
+            const url = `https://serene-meadow-46375.herokuapp.com/product/${id}`
             fetch(url,{
                 method:'DELETE',
             })
@@ -45,7 +45,7 @@ const MyItems = () => {
     }
     return (
         <div className='manage-section my-item-container'>
-        <p className='text-center mt-4 my-5'><span className='service-head-part1'>MY</span> <span className='service-head-part2'>ITEMS</span>{items.length}</p>
+        <p className='text-center mt-4 my-5'><span className='service-head-part1'>MY</span> <span className='service-head-part2'>ITEMS</span></p>
         
         {items.map(item=><div className='manage-product'>
              <span><img src={item.img} alt="" /></span><span><h5>{item.name}</h5></span>

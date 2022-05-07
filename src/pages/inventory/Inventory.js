@@ -10,23 +10,23 @@ const Inventory = () => {
     
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://serene-meadow-46375.herokuapp.com/product/${id}`)
         .then(res=>res.json())
-        .then(data=> parseInt(setProduct(data)) )
+        .then(data=> setProduct(data))
     },[product])
 
     let stock;
     if(quantity>0){
-      stock = <p>{quantity}</p>
+      stock = <span>{quantity}</span>
     }else{
-      stock = <p>sold out</p>
+      stock = <span>sold out</span>
     }
     // console.log(product)
    const handleDelever=()=>{
        const quantity = product.quantity - 1;
          if(quantity>=0){
           const data = {quantity}
-          const url = `http://localhost:5000/product/${id}`
+          const url = `https://serene-meadow-46375.herokuapp.com/product/${id}`
           fetch(url,{
               method:'PUT',
               headers:{
@@ -52,7 +52,7 @@ const Inventory = () => {
        const quantity = currentQuantity + addQuantity
        if(quantity>0){
         const data = {quantity}
-        const url = `http://localhost:5000/product/${id}`
+        const url = `https://serene-meadow-46375.herokuapp.com/product/${id}`
         fetch(url,{
             method:'PUT',
             headers:{
@@ -76,33 +76,27 @@ const Inventory = () => {
     return (
         <div>
           <div className='inventory'>
-          <div className="inventory-data">
-             <div className="img-serction">
-             <img src={img} alt="" />
-             <button className='' onClick={handleDelever}>DELEVER</button>
-             </div>
-            <div className="desc-section">
-            <p className="name">{name}</p>
-            <p>{product._id}</p>
-            <p className="price">Price: ${price}</p>
-            
-             <p className="quantit">In-stock:{stock}</p>
-           
-            <p className="suplier">Suplier: {suplier}</p>
-            <p className='desc mt-4'>
-                <samll>{descreption}</samll>
-            </p>
-            </div>
+            <img src={img} alt="" />
+            <div className="dec-section">
+             <p className="name gold">{name}</p>
+             <p className='mt-3'><span className='gold'>Id:</span> {product._id}</p>
+             <p className="price"><span className='gold'>Price: </span> ${price}</p>
+             <p className="quantit tomato"><span className='gold'>Quantity:</span> {stock}</p>
+             <p className="suplier"><span className='gold'>Suplier: </span>{suplier}</p>
+             <p className='desc mt-4'><span className='gold'>Detaile:</span> 
+                 <samll>{descreption}</samll>
+             </p>
+               <div className="add-quantity">
+                 <button className='' onClick={handleDelever}>DELEVER</button>
+             <form onSubmit={handleFormQuantity}>
+                 <input type="number" name='quantity' placeholder='add item quantity' />
+                 <input type="submit" value="SUBMIT" />
+             </form>
+              </div>
+            </div> 
           </div>
-        <div className="add-quantity">
-            <form onSubmit={handleFormQuantity}>
-                <input type="number" name='quantity' placeholder='add item quantity' />
-                <input type="submit" value="SUBMIT" />
-            </form>
-        </div>
-       </div>
-        <button className='manage-btn'><Link to="/manageStock">MANAGE STOCK</Link></button>
-        </div>
+            <button className='manage-btn'><Link to="/manageStock">MANAGE STOCK</Link></button>
+         </div>
     );
 };
 

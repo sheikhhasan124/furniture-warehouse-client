@@ -16,7 +16,7 @@ const AddItem = () => {
         const img = event.target.img.value;
         const data = {email,name,price,quantity,descreption,suplier,img}
           
-        const url = `http://localhost:5000/product`
+        const url = `https://serene-meadow-46375.herokuapp.com/product`
         fetch(url,{
             method:'POST',
             headers:{
@@ -33,7 +33,7 @@ const AddItem = () => {
     }
     return (
         <div className='additem'>
-           add item 
+              <p className='text-center mt-4'><span className='service-head-part1'>ADD</span> <span className='service-head-part2'>ITEM</span></p>
 
            <form onSubmit={handleForm}>
                <input type="text" name='name' placeholder='name'/>

@@ -8,7 +8,7 @@ const ManageStock = () => {
     const deleteItem=(id)=>{
         const proceed = window.confirm('are u sure to delete')
         if(proceed){
-            const url = `http://localhost:5000/product/${id}`
+            const url = `https://serene-meadow-46375.herokuapp.com/product/${id}`
             fetch(url,{
                 method:'DELETE',
             })
@@ -22,7 +22,7 @@ const ManageStock = () => {
     
     return (
         <div className='manage-section'>
-            <p className='text-center mt-4'><span className='service-head-part1'>MANAGE</span> <span className='service-head-part2'>STOCK</span>{services.length}</p>
+            <p className='text-center mt-4'><span className='service-head-part1'>MANAGE</span> <span className='service-head-part2'>STOCK</span></p>
             
             {services.map(service=><div className='manage-product'>
                  <span><img src={service.img} alt="" /></span><span><h5>{service.name}</h5></span>
